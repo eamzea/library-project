@@ -1,0 +1,8 @@
+{{#each books}}
+<p>El libro {{this.title}} está 
+	{{#if this.available }} 
+	disponible 
+	{{else}}
+	no disponible
+	{{/if}} </p>
+{{/each}}
