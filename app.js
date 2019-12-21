@@ -53,4 +53,7 @@ app.use('/', index);
 const users = require('./routes/users');
 app.use('/users', users);
 
+const books = require('./routes/books');
+app.use('/books', books);
+
 module.exports = app;

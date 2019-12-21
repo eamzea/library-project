@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Book = require('../models/Book');
+const User = require('../models/User');
 
 const dbName = 'library-project';
 mongoose.connect(`mongodb://localhost/${dbName}`);
@@ -77,10 +78,12 @@ const books = [
 	}
 ];
 
-Book.create(books, (err) => {
-	if (err) {
-		throw err;
-	}
-	console.log(`Created ${books.length} books`);
-	mongoose.connection.close();
-});
+// Book.create(books, (err) => {
+// 	if (err) {
+// 		throw err;
+// 	}
+// 	console.log(`Created ${books.length} books`);
+// 	mongoose.connection.close();
+// });
+
+User.create([ { username: 'Pepito' } ]);
